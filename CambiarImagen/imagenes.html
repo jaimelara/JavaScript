@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<body>
+
+<h1>JavaScript puede cambiar Imagenes</h1>
+
+<img id="myImage" onclick="changeImage()" 
+     src="imagenes/web1.jpg" height="464" 
+     style="cursor:pointer"
+     alt="Los desarrolladores web toman café"
+     title="Los desarrolladores web toman café">
+
+<p>Da clic en la imagen para cambiarla.</p>
+
+<script>
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("web1")) {
+        image.src = "imagenes/web2.jpg";
+        image.alt = "A los desarrolladores web les gusta la cerveza";
+        image.title = "A los desarrolladores web les gusta la cerveza";
+    } else {
+        image.src = "imagenes/web1.jpg";
+        image.alt = "Los desarrolladores web toman café";
+        image.title = "Los desarrolladores web toman café";
+    }
+}
+</script>
+
+</body>
+</html>
